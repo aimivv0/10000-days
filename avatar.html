@@ -133,7 +133,7 @@
 
     <div>
         <a href="avatar.svg" download="10000-days-avatar.svg" class="btn">💾 下载 SVG 格式</a>
-        <button class="btn" onclick="downloadPNG()">🖼️ 下载 PNG 格式</button>
+        <a href="avatar-png.html" class="btn">🖼️ 下载 PNG 格式</a>
     </div>
 
     <div class="steps">
@@ -158,27 +158,6 @@
 
     <a href="index.html" class="back-link">← 返回纪念页面</a>
 
-    <canvas id="canvas" style="display: none;"></canvas>
 
-    <script>
-        function downloadPNG() {
-            const canvas = document.getElementById('canvas');
-            const ctx = canvas.getContext('2d');
-            const img = new Image();
-            
-            canvas.width = 400;
-            canvas.height = 400;
-            
-            img.onload = function() {
-                ctx.drawImage(img, 0, 0, 400, 400);
-                const link = document.createElement('a');
-                link.download = '10000-days-avatar.png';
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-            };
-            
-            img.src = 'avatar.svg';
-        }
-    </script>
 </body>
 </html>
