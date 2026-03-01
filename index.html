@@ -43,6 +43,24 @@
             font-size: 1.2em;
         }
 
+        .avatar-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.5);
+            border-radius: 25px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        .avatar-link:hover {
+            background: rgba(102, 126, 234, 0.3);
+            transform: translateY(-2px);
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -328,6 +346,7 @@
         <header>
             <h1>🌍 第 10000 天</h1>
             <p class="subtitle">你在地球上的第10000天，值得被铭记</p>
+            <a href="avatar.html" class="avatar-link">🎨 获取专属纪念头像</a>
         </header>
 
         <div class="stats-grid">
